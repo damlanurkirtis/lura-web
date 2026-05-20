@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuraMoon — Estetik Ev Dekorasyonu & Tasarım</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="templatemo-maison-style.css">
+</head>
+<body>
+
+    <header class="site-header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+    <img src="images/logo.jpeg" alt="LuraMoon Logo" style="
+    height: 90px; 
+    width: 90px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    image-rendering: -webkit-optimize-contrast; /* Netliği artırır */
+    image-rendering: crisp-edges;               /* Kenarları keskinleştirir */
+">
+    <span style="font-size: 40px; font-weight: 1000; color: #333;">Lura<span style="color: #948f8f;">Moon</span></span>
+</a>
+                
+                <nav class="nav-main">
+                    <a href="#ozel-koleksiyonlar">Özel Koleksiyonlar</a>
+                    <a href="#hikayemiz">Yaşayan Tasarımlarımızın Hikayesi</a>
+                    <a href="#kategoriler">Kategoriler</a>
+                    <a href="#iletisim">İletişim</a>
+                    <a href="javascript:void(0)" class="nav-cta" onclick="showCatalog('all')">İncele</a>
+                </nav>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç/kapat">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <nav class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" id="mobileNavClose">×</button>
+        <ul class="mobile-nav-links">
+            <li><a href="#ozel-koleksiyonlar">Özel Koleksiyonlar</a></li>
+            <li><a href="#hikayemiz">Yaşayan Tasarımlarımızın Hikayesi</a></li>
+            <li><a href="#kategoriler">Kategoriler</a></li>
+            <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+        <div class="mobile-nav-cta">
+<a href="javascript:void(0)" class="btn-primary" onclick="showCatalog('all')" style="width: 100%; text-align: center;">İncele</a>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <p class="text-label hero-tagline">Modern ve Zarif Dekorasyon</p>
+            <h1 class="heading-display hero-title">
+                Tasarımın<br><em>Sanata</em> Dönüştüğü Yer
+            </h1>
+            <p class="text-body hero-description">
+                LuraMoon koleksiyonundaki her parça, yaşam alanlarınıza benzersiz bir ruh katmak ve hikayenizi anlatmak için özenle tasarlandı.
+            </p>
+            <div class="hero-actions">
+                <a href="#ozel-koleksiyonlar" class="btn-primary">Özel Koleksiyonları Keşfet</a>
+                <a href="#hikayemiz" class="btn-text">Bizim Mirasımız</a>
+            </div>
+        </div>
+       <div class="hero-slide active" data-title="Ay Işığı Serisi" data-price="250.500 TL'den başlayan fiyatlarla" onclick="openCollection('AyIsigi')" style="cursor: pointer;">
+    <img src="images/ayışığı.png" alt="LuraMoon Özel Tasarım">
+</div>
+            <div class="hero-image-overlay">
+                <p class="overlay-title" id="heroTitle">Ay Işığı Serisi</p>
+                <p class="overlay-price" id="heroPrice">250.500 TL'den başlayan fiyatlarla</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="collections" id="ozel-koleksiyonlar">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <h2 class="heading-display section-title">Özel Koleksiyonlar</h2>
+                    <p class="text-body section-subtitle">Evinizin her köşesi için özenle seçilmiş tasarımlar</p>
+                </div>
+                <a href="javascript:void(0)" class="btn-text" onclick="showCatalog('collections')">Tümünü Görüntüle</a>
+            </div>
+            
+            <<div class="collections-grid">
+    <div class="collection-item" onclick="openCollection('YasamAlani')" style="cursor: pointer;">
+        <div class="collection-image">
+            <img src="images/the lura moon.jpeg" alt="Salon dekorasyonu">
+        </div>
+        <div class="collection-overlay">
+            <h3 class="collection-name">the lura moon</h3>
+            <p class="collection-count">24 parça - İncelemek için tıkla</p>
+        </div>
+    </div>
+    <div class="collection-item" onclick="openCollection('GunlukEstetik')" style="cursor: pointer;">
+        <div class="collection-image">
+            <img src="images/moonlight.jpeg" alt="Minimalist objeler">
+        </div>
+        <div class="collection-overlay">
+            <h3 class="collection-name">moonlight by lura</h3>
+            <p class="collection-count">36 parça - İncelemek için tıkla</p>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <section class="story" id="hikayemiz">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <p class="text-label story-label">Mirasımız</p>
+                    <h2 class="heading-display story-title">Yaşayan Tasarımlarımızın Hikayesi</h2>
+                    <p class="text-body story-text">
+                        LuraMoon, el yapımı dekorasyon sanatına adanmış bir aile atölyesi olarak kuruldu. 
+                        Her bir tasarımımız, nesiller boyu aktarılan estetik anlayışın modern bir dışa vurumudur.
+                    </p>
+                    <div class="story-signature">
+                        <p class="signature-name">LuraMoon Atölye</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="craftsmanship" id="kategoriler">
+        <div class="container">
+            <div class="craft-grid">
+                <div class="craft-content">
+                    <p class="text-label">Üretim Kategorilerimiz</p>
+                    <h2 class="heading-display craft-title">Kategoriler</h2>
+                    <p class="text-body craft-text">
+                        Geleneksel yöntemleri modern çizgilerle birleştirerek farklı kategorilerde üretim yapıyoruz.
+                    </p>
+                    <ul class="craft-list text-body">
+    <li onclick="openCollection('Seramik')" style="cursor: pointer;">El Yapımı Seramik ve Porselen</li>
+    <li onclick="openCollection('Aydinlatma')" style="cursor: pointer;">Özel Tasarım Aydınlatma Üniteleri</li>
+    <li onclick="openCollection('SanatObjeleri')" style="cursor: pointer;">Sınırlı Üretim Sanat Objeleri</li>
+    <li onclick="openCollection('MekanTasarimi')" style="cursor: pointer;">Kişiye Özel Mekan Tasarımı</li>
+</ul>
+                    <a href="javascript:void(0)" class="btn-primary" onclick="showCatalog('all')">Kategorileri İncele</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="iletisim">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <p class="text-label">Bize Ulaşın</p>
+                    <h2 class="heading-display contact-title">İletişim</h2>
+                    <p class="text-body contact-text">
+                        Tasarımlarımızı yakından incelemek veya projeleriniz hakkında konuşmak için bizimle iletişime geçin.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <p class="contact-item-label">E-posta</p>
+                            <p class="contact-item-value"><a href="mailto:merhaba@luramoon.com">merhaba@luramoon.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3 class="form-title">Mesaj Gönderin</h3>
+                    <form id="appointmentForm">
+                        <input type="text" placeholder="Adınız" class="form-input" required>
+                        <input type="email" placeholder="E-posta" class="form-input" required>
+                        <textarea class="form-textarea" placeholder="Mesajınız"></textarea>
+                        <button type="submit" class="form-submit">Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 LuraMoon. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="collectionModal" class="custom-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCollection()">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <script src="templatemo-maison-doree.js"></script>
+    <div id="collectionModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background-color:rgba(0,0,0,0.7); align-items:center; justify-content:center;">
+    <div id="modalBody" style="background:white; padding:30px; border-radius:15px; max-width:500px; width:90%; position:relative;">
+        </div>
+</div>
+</body>
+</html>
